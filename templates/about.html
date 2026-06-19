@@ -1,0 +1,312 @@
+{% extends "base.html" %}
+{% block title %}About Us | TalentHub{% endblock %}
+
+{% block content %}
+<section class="about-section py-5">
+  <div class="container">
+    <!-- Header -->
+    <div class="text-center mb-5">
+      <h1 class="fw-bold">
+        <span class="text-primary">About</span>
+        <span style="color: #6f42c1;">TalentHub</span>
+      </h1>
+      <p class="lead text-muted mt-3">Where freelancers and clients connect — turning ideas into success stories.</p>
+    </div>
+
+    <!-- Mission + Image -->
+    <div class="row align-items-center g-5 mb-5">
+      <div class="col-lg-6 order-lg-1">
+        <img src="https://static.vecteezy.com/system/resources/previews/036/527/819/non_2x/global-network-connection-teamwork-of-colleagues-from-different-part-of-the-world-cooperation-and-teamwork-using-internet-connection-vector.jpg" 
+             class="img-fluid rounded-4 shadow-lg" alt="About TalentHub">
+      </div>
+      <div class="col-lg-6 order-lg-2">
+        <div class="p-4 bg-white bg-opacity-75 rounded-4 shadow-sm">
+          <h3 class="fw-bold mb-3 text-dark">Our Mission</h3>
+          <p class="text-secondary mb-4">
+            At <strong>TalentHub</strong>, we empower freelancers and companies by bridging the gap between talent and opportunity.
+            Whether you’re a creative, developer, or entrepreneur, we help your skills shine on a global stage.
+          </p>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Seamless job posting and discovery</li>
+            <li class="mb-2"><i class="bi bi-shield-lock-fill text-primary me-2"></i> Secure communication & payments</li>
+            <li class="mb-2"><i class="bi bi-lightning-charge-fill text-warning me-2"></i> Fast, transparent hiring process</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core Values -->
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card text-center border-0 shadow-lg rounded-4 p-4 h-100 hover-card">
+          <div class="mb-3">
+            <i class="bi bi-people-fill fs-1 text-primary"></i>
+          </div>
+          <h5 class="fw-bold mb-2">Community First</h5>
+          <p class="text-muted">We believe in creating a space where collaboration thrives and everyone grows together.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center border-0 shadow-lg rounded-4 p-4 h-100 hover-card">
+          <div class="mb-3">
+            <i class="bi bi-stars fs-1 text-warning"></i>
+          </div>
+          <h5 class="fw-bold mb-2">Quality & Trust</h5>
+          <p class="text-muted">Every connection on TalentHub is built on transparency, trust, and verified talent.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center border-0 shadow-lg rounded-4 p-4 h-100 hover-card">
+          <div class="mb-3">
+            <i class="bi bi-rocket-takeoff-fill fs-1 text-success"></i>
+          </div>
+          <h5 class="fw-bold mb-2">Innovation</h5>
+          <p class="text-muted">We constantly evolve to bring you the best tools and features to make freelancing easier.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ⭐ TESTIMONIALS SECTION -->
+<section class="py-5 position-relative"
+  style="background: url('/static/images/image.png') center/cover no-repeat; background-attachment: fixed;">
+
+
+  <div class="container position-relative">
+    <div class="row align-items-center">
+      
+      <!-- 🌆 Left Fixed Image -->
+      <div class="col-lg-5 text-center mb-4 mb-lg-0">
+        <img src="https://i.pinimg.com/1200x/d8/59/c6/d859c65c9650e76b5fc30e8ff0163dae.jpg"
+             alt="Community Illustration"
+             class="img-fluid rounded-4 shadow"
+             style="max-height: 420px; object-fit: cover; position: sticky; top: 100px;">
+      </div>
+
+      <!-- 💬 Right Carousel -->
+      <div class="col-lg-7">
+        <h2 class="fw-bold text-dark mb-3 text-center text-lg-start">
+          What Our Community Says
+        </h2>
+        <p class="text-muted mb-4 text-center text-lg-start">
+          Real stories from our talented freelancers and trusted clients.
+        </p>
+
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+          <div class="carousel-inner text-center">
+
+            <!-- 1️⃣ Priya -->
+            <div class="carousel-item active">
+              <div class="mx-auto p-4 rounded-4 shadow-sm bg-white" style="max-width: 600px;">
+                <p class="fst-italic text-muted mb-4">
+                  “TalentHub streamlined our hiring process — we found the perfect developer in just two days!”
+                </p>
+                <h6 class="fw-bold text-primary mb-0">— Priya Singh</h6>
+                <small class="text-muted">Founder, TechNova</small>
+              </div>
+            </div>
+
+            <!-- 2️⃣ Arjun -->
+            <div class="carousel-item">
+              <div class="mx-auto p-4 rounded-4 shadow-sm bg-white" style="max-width: 600px;">
+                <p class="fst-italic text-muted mb-4">
+                  “The best freelancing platform I’ve used — transparent, reliable, and rewarding.”
+                </p>
+                <h6 class="fw-bold text-primary mb-0">— Arjun Mehta</h6>
+                <small class="text-muted">Full-Stack Developer</small>
+              </div>
+            </div>
+
+            <!-- 3️⃣ Sara -->
+            <div class="carousel-item">
+              <div class="mx-auto p-4 rounded-4 shadow-sm bg-white" style="max-width: 600px;">
+                <p class="fst-italic text-muted mb-4">
+                  “Working on TalentHub feels professional — great clients, secure payments, and easy communication.”
+                </p>
+                <h6 class="fw-bold text-primary mb-0">— Sara Khan</h6>
+                <small class="text-muted">Graphic Designer</small>
+              </div>
+            </div>
+
+            <!-- 4️⃣ David -->
+            <div class="carousel-item">
+              <div class="mx-auto p-4 rounded-4 shadow-sm bg-white" style="max-width: 600px;">
+                <p class="fst-italic text-muted mb-4">
+                  “I’ve grown my freelance business 3x since joining TalentHub — a total game changer!”
+                </p>
+                <h6 class="fw-bold text-primary mb-0">— David Patel</h6>
+                <small class="text-muted">Digital Marketer</small>
+              </div>
+            </div>
+
+            <!-- 5️⃣ Emily -->
+            <div class="carousel-item">
+              <div class="mx-auto p-4 rounded-4 shadow-sm bg-white" style="max-width: 600px;">
+                <p class="fst-italic text-muted mb-4">
+                  “The platform’s project tools make collaboration smooth, even across time zones.”
+                </p>
+                <h6 class="fw-bold text-primary mb-0">— Emily Roberts</h6>
+                <small class="text-muted">UI/UX Designer</small>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Carousel Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-primary rounded-circle p-3" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-primary rounded-circle p-3" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 💬 CUSTOMER FEEDBACK SECTION -->
+<section class="py-5 position-relative text-white" 
+  style="background: url('/static/images/image.png') center/cover no-repeat; background-attachment: fixed;">
+  
+  <!-- Overlay for better contrast -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" 
+       style="background: rgba(0, 0, 0, 0.6); z-index: 0;"></div>
+
+  <div class="container position-relative" style="z-index: 1;">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-white">Customer Feedback</h2>
+      <p class="text-light">Real experiences from our growing TalentHub community</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- 1️⃣ Aarohi -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 rounded-4 shadow-lg p-4 bg-white bg-opacity-75 text-dark hover-card h-100">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="User"
+                 class="rounded-circle me-3 border border-2 border-primary" width="60" height="60">
+            <div>
+              <h6 class="fw-bold mb-0">Aarohi Verma</h6>
+              <small class="text-muted">Freelance Web Developer</small>
+            </div>
+          </div>
+          <p class="fst-italic text-secondary">
+            “TalentHub helped me land my first international client — the platform is smooth and trustworthy!”
+          </p>
+          <div class="text-warning small">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- 2️⃣ Rohan -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 rounded-4 shadow-lg p-4 bg-white bg-opacity-75 text-dark hover-card h-100">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="User"
+                 class="rounded-circle me-3 border border-2 border-success" width="60" height="60">
+            <div>
+              <h6 class="fw-bold mb-0">Rohan Gupta</h6>
+              <small class="text-muted">Startup Founder</small>
+            </div>
+          </div>
+          <p class="fst-italic text-secondary">
+            “We hired a full design team within days. Quality freelancers, secure communication — 10/10!”
+          </p>
+          <div class="text-warning small">★★★★☆</div>
+        </div>
+      </div>
+
+      <!-- 3️⃣ Meera -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 rounded-4 shadow-lg p-4 bg-white bg-opacity-75 text-dark hover-card h-100">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User"
+                 class="rounded-circle me-3 border border-2 border-warning" width="60" height="60">
+            <div>
+              <h6 class="fw-bold mb-0">Meera Nair</h6>
+              <small class="text-muted">UI/UX Designer</small>
+            </div>
+          </div>
+          <p class="fst-italic text-secondary">
+            “Projects on TalentHub are well organized — and the client feedback helps me grow every time.”
+          </p>
+          <div class="text-warning small">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- 4️⃣ Dev -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 rounded-4 shadow-lg p-4 bg-white bg-opacity-75 text-dark hover-card h-100">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="User"
+                 class="rounded-circle me-3 border border-2 border-info" width="60" height="60">
+            <div>
+              <h6 class="fw-bold mb-0">Dev Sharma</h6>
+              <small class="text-muted">Content Strategist</small>
+            </div>
+          </div>
+          <p class="fst-italic text-secondary">
+            “The project management tools are incredible. I can collaborate with clients in real-time.”
+          </p>
+          <div class="text-warning small">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- 5️⃣ Emily -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 rounded-4 shadow-lg p-4 bg-white bg-opacity-75 text-dark hover-card h-100">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://randomuser.me/api/portraits/women/51.jpg" alt="User"
+                 class="rounded-circle me-3 border border-2 border-danger" width="60" height="60">
+            <div>
+              <h6 class="fw-bold mb-0">Emily Roberts</h6>
+              <small class="text-muted">Digital Marketer</small>
+            </div>
+          </div>
+          <p class="fst-italic text-secondary">
+            “I’ve built long-term partnerships here — it’s more than a platform, it’s a community.”
+          </p>
+          <div class="text-warning small">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Styles -->
+<style>
+.about-section {
+  background: linear-gradient(135deg, #e3f2fd 0%, #f8fbff 100%);
+  background-image: url('https://i.pinimg.com/1200x/18/b0/65/18b0659e1ad4dcf50dead9bd5fcd71ef.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+.hover-card {
+  transition: all 0.3s ease;
+}
+.hover-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.hover-card {
+  transition: all 0.35s ease;
+  backdrop-filter: blur(6px);
+}
+.hover-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+</style>
+{% endblock %}

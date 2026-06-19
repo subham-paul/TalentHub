@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% block title %}Browse Jobs | TalentHub{% endblock %}
+
+{% block content %}
+
+<!-- Header Section with Background -->
+<section class="job-header-section text-center text-dark py-5 mb-5">
+    <div class="container">
+        <h1 class="fw-bold  mb-2">Discover Your Next Opportunity</h1>
+        <p class="text-muted fs-5">Browse the latest freelance and full-time jobs that fit your skills</p>
+    </div>
+</section>
+
+<div class="container mb-5 pb-5">
+
+    <!-- Search Form -->
+    <form method="GET" action="{{ url_for('jobs') }}" class="row g-3 justify-content-center mb-5">
+        <div class="col-md-5">
+            <input name="search" type="text" class="form-control form-control-lg shadow-sm"
+                placeholder="🔍 Search by job title or description..."
+                value="{{ request.args.get('search', '') }}">
+        </div>
+        <div class="col-md-3">
+            <select name="category" class="form-select form-select-lg shadow-sm">
+                <option value="">All Categories</option>
+                <option value="Web Development" {% if request.args.get('category') == 'Web Development' %}selected{% endif %}>Web Development</option>
+                <option value="Graphics Design" {% if request.args.get('category') == 'Graphics Design' %}selected{% endif %}>Graphics Design</option>
+                <option value="Writing" {% if request.args.get('category') == 'Writing' %}selected{% endif %}>Writing</option>
+                <option value="Digital Marketing" {% if request.args.get('category') == 'Digital Marketing' %}selected{% endif %}>Digital Marketing</option>
+                <option value="Data Science" {% if request.args.get('category') == 'Data Science' %}selected{% endif %}>Data Science</option>
+                <option value="Mobile App" {% if request.args.get('category') == 'Mobile App' %}selected{% endif %}>Mobile App</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary btn-lg w-100 shadow-sm fw-semibold">
+                Search
+            </button>
+        </div>
+    </form>
+
+    <!-- Job Cards -->
+    <div class="row g-4">
+        {% for job in jobs %}
+        <div class="col-md-4 d-flex">
+            <div class="card job-card shadow-lg border-0 rounded-4 w-100 position-relative p-4 hover-card">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h5 class="fw-bold text-dark">{{ job.title }}</h5>
+                    <span class="badge bg-info text-dark">{{ job.category }}</span>
+                </div>
+
+                <p class="text-muted small mb-3">{{ job.description[:110] }}...</p>
+
+                {% if job.skills %}
+                <div class="mb-3">
+                    <span class="fw-semibold small text-secondary">Skills:</span>
+                    <div class="mt-1">
+                        {% for skill in job.skills.split(',') %}
+                        <span class="badge bg-light text-dark border me-1">{{ skill.strip() }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                <div class="d-flex justify-content-between align-items-center mt-auto">
+                    <span class="fw-bold fs-5 text-success">${{ job.budget }}</span>
+                    <a href="{{ url_for('job_detail', job_id=job.id) }}" class="btn btn-outline-primary btn-sm rounded-pill px-3">
+                        View Details
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="text-center text-muted mt-4">
+            <i class="bi bi-search fs-1 d-block mb-3"></i>
+            <p>No matching jobs found.</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Custom Styles -->
+<style>
+.job-header-section {
+    background-image: url("https://i.pinimg.com/1200x/63/f6/aa/63f6aa532293e29b14720790b5584331.jpg");
+    /* Save your uploaded image as: static/images/bg-header.png */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.job-header-section h1, .job-header-section p {
+    background: rgba(255,255,255,0.8);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.hover-card {
+    transition: all 0.3s ease;
+}
+.hover-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.job-card h5 {
+    color: #0d6efd;
+}
+.badge.bg-info {
+    background-color: #e3f2fd !important;
+}
+</style>
+
+{% endblock %}

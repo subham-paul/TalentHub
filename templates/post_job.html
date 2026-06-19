@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% block title %}Post a Job | TalentHub{% endblock %}
+
+{% block content %}
+<section class="job-post-section py-5">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      
+      <!-- Job Form -->
+      <div class="col-lg-8">
+        <div class="card shadow-lg border-0 rounded-4 p-4 bg-white">
+          <h2 class="text-center mb-4 fw-bold text-primary">
+            <i class="bi bi-briefcase-fill me-2"></i>Post a Job
+          </h2>
+
+          <form method="POST">
+            <div class="table-responsive">
+              <table class="table table-borderless align-middle">
+                <tbody>
+                  <tr>
+                    <th class="text-end w-25">Job Title:</th>
+                    <td>
+                      <input type="text" name="title" class="form-control" placeholder="Ex: Web Designer" required>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th class="text-end">Job Category:</th>
+                    <td>
+                      <select name="category" class="form-select" required>
+                        <option value="">Select a Category</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Graphics Design">Graphics Design</option>
+                        <option value="Writing">Writing</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                        <option value="Data Science">Data Science</option>
+                        <option value="Mobile App">Mobile App</option>
+                      </select>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th class="text-end">Company Name:</th>
+                    <td>
+                      <input type="text" name="company" class="form-control" placeholder="Ex: Google, Meta" required>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th class="text-end">Location:</th>
+                    <td>
+                      <input type="text" name="location" class="form-control" placeholder="City, Country" required>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th class="text-end">Budget ($):</th>
+                    <td>
+                      <input type="number" step="0.01" min="0" name="budget" class="form-control" placeholder="Enter job budget" required>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th class="text-end align-top">Job Description:</th>
+                    <td>
+                      <textarea name="description" class="form-control" rows="4" placeholder="Explain job role and responsibility..." required></textarea>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th class="text-end align-top">Skills Required:</th>
+                    <td>
+                      <textarea name="skills" class="form-control" rows="3" placeholder="Example: HTML, CSS, Communication skills"></textarea>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="text-center mt-4">
+              <button class="btn btn-primary w-100 fw-bold py-2">
+                <i class="bi bi-upload me-2"></i>Post Job
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right-side Illustration -->
+      <div class="col-lg-4 d-none d-lg-block text-center">
+        <img src="https://scontent.fccu4-3.fna.fbcdn.net/o1/v/t0/f2/m340/AQMqyRoUsA9iULNqqgjwhqTNOY0eh2hYKnbQEnaIuaH_3wIPv5H83vDjruWjoquiYPXsUqlnistsSLEZ9p3bann7yEpIrdpnyayDrcpRKUyiHOJUxZa_2IGjOqWnJn1FCfbJj-xWKUlzGsZ7NRkCojpvb2v9RA.jpeg?_nc_ht=scontent.fccu4-3.fna.fbcdn.net&_nc_gid=DRXuLxILadl45Z_C19XJxw&_nc_cat=111&_nc_oc=AdmWaTfqeVggXUfF-LdvPZ1t3yRFSNhPuly8M6ylTEIuVQQwEEW5i1hLtRw6_OO896dvK2i14gs_9crGAR_I8NqW&ccb=9-4&oh=00_AfdkQWbu89R08CvA9AlE50PymA3eCXKcokwSR8xsBiM3cw&oe=690371AA&_nc_sid=5b3566" 
+             alt="Job Illustration" 
+             class="img-fluid rounded-4 shadow-lg mt-3"
+             style="max-width: 425px; height: auto;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.job-post-section {
+  background: linear-gradient(135deg, #f0f4ff 0%, #e3ecff 100%);
+  background-image: url('/static/images/image.png');
+  background-size: cover;
+  background-position: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  font-weight: 600;
+  color: #495057;
+  padding-right: 1rem;
+}
+
+.form-control, .form-select {
+  border-radius: 0.5rem;
+  padding: 0.7rem 1rem;
+}
+</style>
+{% endblock %}
